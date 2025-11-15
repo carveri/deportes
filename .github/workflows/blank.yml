@@ -7,15 +7,7 @@ on:
 jobs:
 
 
-  build:
-    env:
-      USER_PG: ${{secrets.USER_PG}}
-      HOST_PG: ${{secrets.HOST_PG}}
-      PASSWORD_PG: ${{secrets.PASSWORD_PG}}
-      DATABASE_PG: ${{secrets.DATABASE_PG}}
-      PORT_PG: ${{secrets.PORT_PG}}
-
-    runs-on: ubuntu-latest
+  
 
 
   deploy:
