@@ -8,10 +8,10 @@ const app = express()
 app.use(express.json())
 app.use('/api', futbolRoute)
 
-console.log('user:', process.env.USER_PG);
+
 
 
 
 app.listen(3000, ()=>{
-    console.log('server corriendo bien porfa template 6', 'user:', process.env.USER_PG);
+    console.log('server en aws. con sus secrets');
 })
