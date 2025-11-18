@@ -19,9 +19,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
 
-      - name: Upload artifacts to S3
-        run: |
-          aws s3 cp ./your-app-artifacts.zip s3://your-deployment-bucket/your-app-artifacts.zip
+      
 
       - name: Ejecutar aplicación
         run: |
@@ -38,12 +36,7 @@ jobs:
           DATABASE_PG: ${{secrets.DATABASE_PG}}
           PORT_PG: ${{secrets.PORT_PG}}
 
-      - name: Deploy to EC2 via CodeDeploy
-        run: |
-          aws deploy create-deployment \
-            --application-name YourCodeDeployApplication \
-            --deployment-group-name YourDeploymentGroup \
-            --s3-location bucket=your-deployment-bucket,key=your-app-artifacts.zip,bundleType=zip
+      
 
 
       
